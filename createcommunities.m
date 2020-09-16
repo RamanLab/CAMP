@@ -1,8 +1,8 @@
 initCobraToolbox();
 %get input models and generate all possible pairwise combinations
 folder = 'LAB_models';
-F = get_model_names('LAB_models');
-v = {F};
+v = get_model_names('LAB_models');
+
 C = nchoosek(v{1,1},2);
 
 %generate community models and save them as .mat files
