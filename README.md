@@ -13,7 +13,3 @@
 All simulations were performed in MATLAB R2018a (MathWorks Inc., USA) using: 
 1. [COBRA Toolbox v3.0](https://opencobra.github.io/cobratoolbox/stable/)
 2. [IBM ILOG CPLEX](https://www.ibm.com/in-en/products/ilog-cplex-optimization-studio) 
-
-
-### Acknowledgements
-[Initiative for Biological Systems Engineering](https://ibse.iitm.ac.in/)
