@@ -30,5 +30,5 @@ end
 ABDtable = cell2table(ABDtable);
 ABDtable.Properties.VariableNames ={'Species','RelativeAbundance'};
 %save table as xlsx file 
-filename = 'abundance.xlsx';
+filename = 'GXminimal_abd.xlsx';
 writetable(ABDtable, filename);

@@ -1,13 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
+
+# In[1]:
+
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib
 
-rates = pd.read_csv(r"C:\Users\Maziya\Documents\monoculture_coculture_file.csv", index_col=0)
+
+# In[2]:
+
+
+rates = pd.read_csv(r"C:\Users\Maziya\Documents\49vs49_GXcommspecific.csv", index_col=0)
 rates = rates.replace(0, np.nan)
+
+
+# In[3]:
+
 
 # differences between monoculture and cocultures
 
@@ -19,7 +31,14 @@ for i in range(len(rates)):
     
 rates_diff_test = pd.DataFrame(rates_diff_test, index=rates.columns, columns=rates.columns)
 
+# rates_diff_test
+
+
+# In[4]:
+
+
 # differences between monoculture and cocultures with cutoff
+
 rates_diff = []
 
 for i in range(len(rates)):
@@ -35,16 +54,27 @@ rates_diff = pd.DataFrame(rates_diff, index=rates.columns, columns=rates.columns
 
 # rates_diff
 
+
+# In[5]:
+
+
 for i in range(len(rates_diff)):
     rates_diff.iloc[i, i] = None
 
 
+# In[6]:
+
+
 rates_diff.head()
 
-#plot heatmap
+
+# In[7]:
+
+
+
 """
 change first value of each list to change color of "Decrease"
-change second value of each list to change color of "No difference"
+change second value of each list to change color of "No Significant change"
 change third value of each list to change color of "Increase"
 """
 fig, ax = plt.subplots(figsize=(10,8))
@@ -60,11 +90,20 @@ for i, j, k, in zip(reds, greens, blues):
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list('Custom', myColors, len(myColors))
 
 ax = sns.heatmap(data=rates_diff, cmap=cmap, linecolor='black', linewidth=0.01, xticklabels=True, yticklabels=True)
-plt.yticks(fontstyle='italic', fontsize=6)
-plt.xticks(fontstyle='italic', fontsize=6)
+plt.yticks(fontstyle='italic', fontsize=8)
+plt.xticks(fontstyle='italic', fontsize=8)
+plt.xlabel("(in co-culture with)",fontsize=16)
+plt.ylabel("Organism",fontsize=16)
 
 colorbar = ax.collections[0].colorbar
 colorbar.set_ticks([-0.667, 0.000, 0.667])
 colorbar.set_ticklabels(['Decrease','No Significant change','Increase'])
-
+ax.tick_params(labelsize=8)
 plt.savefig("heatmap_monovsco.png", dpi=900, bbox_inches='tight')
+
+
+# In[ ]:
+
+
+
+
