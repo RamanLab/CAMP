@@ -1,6 +1,5 @@
 # **CAMP** 
- **C**o-culture/**C**ommunity **A**nalyses for **M**etabolite **P**roduction
-#### CAMP is a computational analyses framework which allows generation and evaluation of numerous microbial communities for optimal production of a metabolite of interest. 
+ **C**o-culture/**C**ommunity **A**nalyses for **M**etabolite **P**roduction is a computational analyses framework which allows generation and evaluation of numerous microbial communities for optimal production of a metabolite of interest. 
 
 #### Overview
 1) Microbial GSMMs are retrieved from databases such as [VMH](https://www.vmh.life/) (Virtual Metabolic Human). Each of these GSMMs is simulated in three different nutrient conditions (Excess, Minimal and Species-specific). Predicted growth rates and product flux are obtained using flux balance analysis (FBA) and flux variability analysis (FVA). The product yield is computed as the maximum product flux obtained per unit flux of substrate uptake. 
