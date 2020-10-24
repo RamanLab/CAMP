@@ -1,5 +1,5 @@
 # **CAMP** 
-# **C**o-culture/**C**ommunity **A**nalyses for **M**etabolite **P**roduction
+ **C**o-culture/**C**ommunity **A**nalyses for **M**etabolite **P**roduction
 #### CAMP is a computational analyses framework which allows generation and evaluation of numerous microbial communities for optimal production of a metabolite of interest. 
 
 #### Overview
@@ -18,5 +18,3 @@ All simulations were performed in MATLAB R2018a (MathWorks Inc., USA) using:
 
 #### Acknowledgements
 [Initiative for Biological Systems Engineering](https://ibse.iitm.ac.in/)
-
-
