@@ -15,5 +15,5 @@ All simulations were performed in MATLAB R2018a (MathWorks Inc., USA) using:
 2. [IBM ILOG CPLEX](https://www.ibm.com/in-en/products/ilog-cplex-optimization-studio) 
 
 
-### BioRxiv Preprint
-[Link to preprint of this paper](https://www.biorxiv.org/content/10.1101/2020.10.24.353805v1)
+### Research Article Link
+[Link to Article]([https://doi.org/10.1016/j.csbj.2021.11.009])
