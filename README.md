@@ -16,4 +16,4 @@ All simulations were performed in MATLAB R2018a (MathWorks Inc., USA) using:
 
 
 ### Research Article Link
-[Link to Article]([https://doi.org/10.1016/j.csbj.2021.11.009])
+[Link to Article](https://doi.org/10.1016/j.csbj.2021.11.009)
