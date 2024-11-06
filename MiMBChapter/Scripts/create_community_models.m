@@ -42,13 +42,18 @@
 
         % Use SteadyCom function createCommModel to create a community model
         [modelCom{iter, 1}, infoCom{iter, 1}, indCom{iter, 1}] = createCommModel(modelCell, options(iter));
+        %modelCom{iter, 1}.description = strrep(modelCom{iter, 1}.description, '.mat', '');
         modelCom{iter, 1}.modelID = modelCom{iter, 1}.description;
         modelCom{iter, 1}.modelName = modelCom{iter, 1}.description;
         modelComNew = modelCom{iter, 1};
         modelComNew.subSystems = modelCom{iter, 1}.subSystems;
         infoComNew = infoCom{iter, 1};
         indComNew = indCom{iter, 1};
-
+        positions = strfind(modelComNew.description, '.mat');
+        if length(positions) > 1
+            modelComNew.description = eraseBetween(modelComNew.description, positions(1), positions(end - 1) + 3);
+        end
+        %modelComNew.description = strrep(modelComNew.description,'.mat','');
         filename = fullfile(output_folder, modelComNew.description);
         save(filename, 'modelComNew', 'infoComNew', 'indComNew', '-mat');
     end
